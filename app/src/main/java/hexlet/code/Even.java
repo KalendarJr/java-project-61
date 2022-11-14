@@ -24,11 +24,12 @@ public class Even {
 
         if (numberOne % 2 == 0 && answerOne.equals(yes)) {
             System.out.println("Correct!");
-        } else if (numberOne / 2 != 0 && answerOne.equals(no)) {
+        } else if (numberOne % 2 != 0 && answerOne.equals(no)) {
             System.out.println("Correct!");
         } else {
             System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
             System.out.println("Let's try again, " + userName + "!");
+            return;
         }
 
         int numberTwo = integerNumber.nextInt(100);
@@ -39,7 +40,7 @@ public class Even {
 
         if (numberTwo % 2 == 0 && answerTwo.equals(yes)) {
             System.out.println("Correct!");
-        } else if (numberTwo / 2 != 0 && answerTwo.equals(no)) {
+        } else if (numberTwo % 2 != 0 && answerTwo.equals(no)) {
             System.out.println("Correct!");
         } else {
             System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
@@ -56,7 +57,7 @@ public class Even {
         if (numberThree % 2 == 0 && answerThree.equals(yes)) {
             System.out.println("Correct!");
             System.out.println("Congratulations, " + userName + "!");
-        } else if (numberThree / 2 != 0 && answerThree.equals(no)) {
+        } else if (numberThree % 2 != 0 && answerThree.equals(no)) {
             System.out.println("Correct!");
             System.out.println("Congratulations, " + userName + "!");
         } else {
