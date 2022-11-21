@@ -1,71 +1,68 @@
-package hexlet.code;
+package hexlet.code.games;
 
-import java.util.Random;
-import java.util.Scanner;
+import hexlet.code.Engine;
 
 public class Even {
-    public static void main(String[] str) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("May I have your name? ");
-        String userName = scanner.next();
-        System.out.println("Hello, " + userName + "!");
-
-        Random integerNumber = new Random();
-        int numberOne = integerNumber.nextInt(100);
+    public static void main(String[] args) {
+        String userName = Engine.nameUser();
 
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
-        System.out.println("Question: " + numberOne);
+        System.out.println("Question: " + Engine.numberOne);
         System.out.print("Your answer: ");
-        String answerOne = scanner.next();
+        String resultOne = Engine.answerUserString();
 
         String yes = "yes";
         String no = "no";
 
-        if (numberOne % 2 == 0 && answerOne.equals(yes)) {
+        if (Engine.numberOne % 2 == 0 && resultOne.equals(yes)) {
             System.out.println("Correct!");
-        } else if (numberOne % 2 != 0 && answerOne.equals(no)) {
+        } else if (Engine.numberOne % 2 != 0 && resultOne.equals(no)) {
             System.out.println("Correct!");
-        } else {
-            System.out.println("'" + answerOne + "'" + " is wrong answer ;(. Correct answer was '" + answerOne + "'.");
+        } else if (Engine.numberOne % 2 == 0 && resultOne.equals(no)) {
+            System.out.println("'" + resultOne + "'" + " is wrong answer ;(. Correct answer was '" + yes + "'.");
+            System.out.println("Let's try again, " + userName + "!");
+            return;
+        } else if (Engine.numberOne % 2 != 0 && resultOne.equals(yes)) {
+            System.out.println("'" + resultOne + "'" + " is wrong answer ;(. Correct answer was '" + no + "'.");
             System.out.println("Let's try again, " + userName + "!");
             return;
         }
 
-        int numberTwo = integerNumber.nextInt(100);
-
-        System.out.println("Question: " + numberTwo);
+        System.out.println("Question: " + Engine.numberTwo);
         System.out.print("Your answer: ");
-        String answerTwo = scanner.next();
+        String resultTwo = Engine.answerUserString();
 
-        if (numberTwo % 2 == 0 && answerTwo.equals(yes)) {
+        if (Engine.numberTwo % 2 == 0 && resultTwo.equals(yes)) {
             System.out.println("Correct!");
-        } else if (numberTwo % 2 != 0 && answerTwo.equals(no)) {
+        } else if (Engine.numberTwo % 2 != 0 && resultTwo.equals(no)) {
             System.out.println("Correct!");
-        } else {
-            System.out.println("'" + answerTwo + "'" + " is wrong answer ;(. Correct answer was '" + answerTwo + "'.");
+        } else if (Engine.numberTwo % 2 == 0 && resultTwo.equals(no)) {
+            System.out.println("'" + resultTwo + "'" + " is wrong answer ;(. Correct answer was '" + yes + "'.");
+            System.out.println("Let's try again, " + userName + "!");
+            return;
+        } else if (Engine.numberTwo % 2 != 0 && resultTwo.equals(yes)) {
+            System.out.println("'" + resultTwo + "'" + " is wrong answer ;(. Correct answer was '" + no + "'.");
             System.out.println("Let's try again, " + userName + "!");
             return;
         }
 
-        int numberThree = integerNumber.nextInt(100);
-
-        System.out.println("Question: " + numberThree);
+        System.out.println("Question: " + Engine.numberThree);
         System.out.print("Your answer: ");
-        String answerThree = scanner.next();
+        String resultThree = Engine.answerUserString();
 
-        if (numberThree % 2 == 0 && answerThree.equals(yes)) {
+        if (Engine.numberThree % 2 == 0 && resultThree.equals(yes)) {
             System.out.println("Correct!");
             System.out.println("Congratulations, " + userName + "!");
-        } else if (numberThree % 2 != 0 && answerThree.equals(no)) {
+        } else if (Engine.numberThree % 2 != 0 && resultThree.equals(no)) {
             System.out.println("Correct!");
             System.out.println("Congratulations, " + userName + "!");
-        } else {
-            System.out.println("'" + answerThree + "'" + " is wrong answer ;(. Correct answer was '" + answerThree + "'.");
+        } else if (Engine.numberThree % 2 == 0 && resultThree.equals(no)) {
+            System.out.println("'" + resultThree + "'" + " is wrong answer ;(. Correct answer was '" + yes + "'.");
             System.out.println("Let's try again, " + userName + "!");
-            return;
+        } else if (Engine.numberThree % 2 != 0 && resultThree.equals(yes)) {
+            System.out.println("'" + resultThree + "'" + " is wrong answer ;(. Correct answer was '" + no + "'.");
+            System.out.println("Let's try again, " + userName + "!");
         }
 
-        scanner.close();
     }
 }
