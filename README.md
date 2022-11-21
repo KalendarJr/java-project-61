@@ -8,5 +8,10 @@
 <a href="https://codeclimate.com/github/KalendarJr/java-project-61/test_coverage"><img src="https://api.codeclimate.com/v1/badges/e74e0870ba18fa9c29e5/test_coverage" /></a>
 
 ###asciinema.org Even.java
-https://asciinema.org/a/S0C8E7iEfWy1atfH77x3EC7qy
+https://asciinema.org/a/4cBruLrL0kLTQG7huOwPSbLX3
+
+###asciinema.org Calc.java
+https://asciinema.org/a/L6XdaqGMUj71yDNiYEZce3ioA
+
+
 

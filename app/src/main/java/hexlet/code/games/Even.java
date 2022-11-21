@@ -27,7 +27,7 @@ public class Even {
         } else if (numberOne % 2 != 0 && answerOne.equals(no)) {
             System.out.println("Correct!");
         } else {
-            System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
+            System.out.println("'" + answerOne + "'" + " is wrong answer ;(. Correct answer was '" + answerOne + "'.");
             System.out.println("Let's try again, " + userName + "!");
             return;
         }
@@ -43,7 +43,7 @@ public class Even {
         } else if (numberTwo % 2 != 0 && answerTwo.equals(no)) {
             System.out.println("Correct!");
         } else {
-            System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
+            System.out.println("'" + answerTwo + "'" + " is wrong answer ;(. Correct answer was '" + answerTwo + "'.");
             System.out.println("Let's try again, " + userName + "!");
             return;
         }
@@ -61,7 +61,7 @@ public class Even {
             System.out.println("Correct!");
             System.out.println("Congratulations, " + userName + "!");
         } else {
-            System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
+            System.out.println("'" + answerThree + "'" + " is wrong answer ;(. Correct answer was '" + answerThree + "'.");
             System.out.println("Let's try again, " + userName + "!");
             return;
         }
