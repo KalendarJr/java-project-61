@@ -35,7 +35,7 @@ public class Engine {
          return answer;
      }
 
-    public static int randomMap(int numberOne1) {
+    public static int randomMap(int number) {
         Random numberRandom = new Random();
         int numberOne = numberRandom.nextInt(20);
         int numberTwo = numberRandom.nextInt(10);
@@ -47,6 +47,6 @@ public class Engine {
         int resultTwo = numberThree + numberFour;
         int resultThree = numberFive - numberSix;
 
-        return numberOne1;
+        return number;
     }
 }
