@@ -13,5 +13,8 @@ https://asciinema.org/a/4cBruLrL0kLTQG7huOwPSbLX3
 ###asciinema.org Calc.java
 https://asciinema.org/a/L6XdaqGMUj71yDNiYEZce3ioA
 
+###asciinema.org GCD.java
+https://asciinema.org/a/xAhiBYnFbkdYJU8nSMWIqZl7c
+
 
 
