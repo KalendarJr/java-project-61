@@ -12,17 +12,10 @@ public class GCD {
         System.out.print("Your answer: ");
         int resultOne = Engine.answerUser();
 
-//        var gcd = 1;
-//        for (var o = 1; o <= Engine.numberOne && o <= Engine.numberTwo; o++) {
-//            if (Engine.numberOne % o == 0 && Engine.numberTwo % o == 0) {
-//                gcd = o;
-//            }
-//        }
-
         if (resultOne == Engine.numberOne) {
             System.out.println("Correct!");
         } else {
-            System.out.println("'" + resultOne + "'" + " is wrong answer ;(. Correct answer was " + "'" + i + "'.");
+            System.out.println("'" + resultOne + "'" + " is wrong answer ;(. Correct answer was '" + i + "'.");
             System.out.println("Let's try again, " + userName + "!");
             return;
         }
