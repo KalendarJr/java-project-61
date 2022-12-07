@@ -16,5 +16,6 @@ https://asciinema.org/a/L6XdaqGMUj71yDNiYEZce3ioA
 ###asciinema.org GCD.java
 https://asciinema.org/a/xAhiBYnFbkdYJU8nSMWIqZl7c
 
-
+###asciinema.org Progression.java
+https://asciinema.org/a/HJ3v71OTDMcJGQEoaEmjxjajd
 
