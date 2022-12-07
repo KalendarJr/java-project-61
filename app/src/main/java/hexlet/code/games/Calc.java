@@ -13,7 +13,7 @@ public class Calc {
         if (resultOne == Engine.resultOne) {
             System.out.println("Correct!");
         } else {
-            System.out.println("'" + resultOne + "'" + " is wrong answer ;(. Correct answer was " + "'" + Engine.resultOne + "'.");
+            System.out.println("'" + resultOne + "'" + " is wrong answer ;(. Correct answer was '" + Engine.resultOne + "'.");
             System.out.println("Let's try again, " + userName + "!");
             return;
         }
@@ -25,7 +25,7 @@ public class Calc {
         if (resultTwo == Engine.resultTwo) {
             System.out.println("Correct!");
         } else {
-            System.out.println("'" + resultTwo + "'" + " is wrong answer ;(. Correct answer was " + "'" + Engine.resultTwo + "'.");
+            System.out.println("'" + resultTwo + "'" + " is wrong answer ;(. Correct answer was '" + Engine.resultTwo + "'.");
             System.out.println("Let's try again, " + userName + "!");
             return;
         }
@@ -39,7 +39,7 @@ public class Calc {
             System.out.println("Correct!");
             System.out.println("Congratulations, " + userName + "!");
         } else {
-            System.out.println("'" + resultThree + "'" + " is wrong answer ;(. Correct answer was " + "'" + Engine.resultThree + "'.");
+            System.out.println("'" + resultThree + "'" + " is wrong answer ;(. Correct answer was '" + Engine.resultThree + "'.");
             System.out.println("Let's try again, " + userName + "!");
         }
 
