@@ -36,6 +36,7 @@ public class Progression {
 
         if (resultThree == Engine.resultThreeNumber) {
             System.out.println("Correct!");
+            System.out.println("Congratulations, " + userName + "!");
         } else {
             System.out.println("'" + resultThree + "'" + " is wrong answer ;(. Correct answer was " + "'" + Engine.resultThreeNumber + "'.");
             System.out.println("Let's try again, " + userName + "!");
