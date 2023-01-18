@@ -15,16 +15,15 @@ public class Engine {
     public static int progressionOneNumber = RandomUtils.nextInt(20, 28);
     public static int progressionTwoNumber = RandomUtils.nextInt(20, 35);
     public static int progressionThreeNumber = RandomUtils.nextInt(30, 50);
-    public static Random numberRandom = new Random();
-    public static int numberOne = numberRandom.nextInt(20);
-    public static int numberTwo = numberRandom.nextInt(16);
+    public static int numberOne = RandomUtils.nextInt(1, 20);
+    public static int numberTwo = RandomUtils.nextInt(1, 16);
     public static int resultOneNumber = oneNumber + 8;
     public static int resultTwoNumber = twoNumber + 6;
     public static int resultThreeNumber = threeNumber + 15;
-    public static int numberThree = numberRandom.nextInt(50);
-    public static int numberFour = numberRandom.nextInt(50);
-    public static int numberFive = numberRandom.nextInt(50);
-    public static int numberSix = numberRandom.nextInt(500);
+    public static int numberThree = RandomUtils.nextInt(1, 50);
+    public static int numberFour = RandomUtils.nextInt(1, 50);
+    public static int numberFive = RandomUtils.nextInt(1, 50);
+    public static int numberSix = RandomUtils.nextInt(1, 500);
     public static int resultOne = numberOne * numberTwo;
     public static int resultTwo = numberThree + numberFour;
     public static int resultThree = numberFive - numberSix;
@@ -39,8 +38,6 @@ public class Engine {
 //    public static String questionGCD = "Find the greatest common divisor of given numbers.";
     public static String questionProgression = "What number is missing in the progression?";
     public static String questionPrime = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
-    public static boolean isPrime = true;
-
 
     public static void welcomeUser() {
         System.out.println();
@@ -64,6 +61,16 @@ public class Engine {
          Scanner scanner = new Scanner(System.in);
          int answer = scanner.nextInt();
          return answer;
+     }
+
+     public static int maxGcd(int numberOne, int numberTwo) {
+        int gcd = 1;
+        for (int i = 1; i <= numberOne && i <= numberTwo; i++) {
+            if (numberOne % i == 0 && numberTwo % i == 0) {
+                gcd = i;
+            }
+        }
+        return gcd;
      }
 
      public static void progressionOne() {
