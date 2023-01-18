@@ -19,3 +19,5 @@ https://asciinema.org/a/xAhiBYnFbkdYJU8nSMWIqZl7c
 ###asciinema.org Progression.java
 https://asciinema.org/a/HJ3v71OTDMcJGQEoaEmjxjajd
 
+###asciinema.org Prime.java
+https://asciinema.org/a/cYm9lzj6bUyGeId8F4Gtw32oo
