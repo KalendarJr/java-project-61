@@ -2,7 +2,6 @@ package hexlet.code;
 
 import org.apache.commons.lang3.RandomUtils;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -10,6 +9,9 @@ public class Engine {
     public static int oneNumber = RandomUtils.nextInt(2, 10);
     public static int twoNumber = RandomUtils.nextInt(3, 10);
     public static int threeNumber = RandomUtils.nextInt(1, 11);
+    public static int primeNumberOne = RandomUtils.nextInt(2, 15);
+    public static int primeNumberTwo = RandomUtils.nextInt(15, 30);
+    public static int primeNumberThree = RandomUtils.nextInt(30, 45);
     public static int progressionOneNumber = RandomUtils.nextInt(20, 28);
     public static int progressionTwoNumber = RandomUtils.nextInt(20, 35);
     public static int progressionThreeNumber = RandomUtils.nextInt(30, 50);
@@ -36,6 +38,8 @@ public class Engine {
 //    public static String questionCalc = "What is the result of the expression?";
 //    public static String questionGCD = "Find the greatest common divisor of given numbers.";
     public static String questionProgression = "What number is missing in the progression?";
+    public static String questionPrime = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+    public static boolean isPrime = true;
 
 
     public static void welcomeUser() {
@@ -96,5 +100,17 @@ public class Engine {
         }
         System.out.println();
         System.out.print("Your answer: ");
+    }
+
+    public static boolean isPrime(int number) {
+        boolean result = true;
+        for (int i = 2; i <= number / 2; i++) {
+            if (number % i == 0) {
+                result = false;
+                break;
+            }
+        }
+
+        return result;
     }
 }
