@@ -4,13 +4,7 @@ import hexlet.code.Engine;
 
 public class GCD {
     private static int maxGcd(int numberOne, int numberTwo) {
-        int gcd = 1;
-        for (int i = 1; i <= numberOne && i <= numberTwo; i++) {
-            if (numberOne % i == 0 && numberTwo % i == 0) {
-                gcd = i;
-            }
-        }
-        return gcd;
+        return numberTwo == 0 ? numberOne : maxGcd(numberTwo, numberOne % numberTwo);
     }
 
     public static void gameGCD() {
