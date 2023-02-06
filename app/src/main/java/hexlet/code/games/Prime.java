@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
-    private static int numberQuestion = 3;
+    private static final int numberQuestion = 3;
     private static boolean isPrime(int number) {
         boolean result = true;
         for (int i = 2; i <= number / 2; i++) {

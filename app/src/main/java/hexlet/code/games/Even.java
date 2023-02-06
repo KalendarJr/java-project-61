@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Even {
-    private static int numberQuestion = 3;
+    private static final int numberQuestion = 3;
     private static boolean isEven(int number) {
         return (number % 2 == 0);
     }

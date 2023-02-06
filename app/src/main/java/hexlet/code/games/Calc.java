@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 public class Calc {
-    private static int numberQuestion = 3;
+    private static final int numberQuestion = 3;
     public static int calculations(int oneNumber, int twoNumber, String operator) {
         return switch (operator) {
             case "*" -> oneNumber * twoNumber;

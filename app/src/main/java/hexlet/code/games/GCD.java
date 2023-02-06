@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class GCD {
-    private static int numberQuestion = 3;
+    private static final int numberQuestion = 3;
     private static int maxGcd(int numberOne, int numberTwo) {
         return numberTwo == 0 ? numberOne : maxGcd(numberTwo, numberOne % numberTwo);
     }

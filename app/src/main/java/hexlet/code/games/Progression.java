@@ -3,13 +3,12 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Progression {
-    private static int numberQuestion = 3;
-    private static int maxLength = 10;
-    private static int[] getPrintProgression(int element, int step, int length) {
-//        int lengthProgression = Engine.getRandomNumber(Engine.otherNumber);
-        int[] printProgression = new int[length];
+    private static final int numberQuestion = 3;
+    private static final int maxLength = 10;
+    private static int[] getPrintProgression(int element, int step, int maxLength) {
+        int[] printProgression = new int[maxLength];
 
-        for (int i = 0; i < length; i++) {
+        for (int i = 0; i < maxLength; i++) {
             if (i == 0) {
                 printProgression[i] = element;
             } else {
