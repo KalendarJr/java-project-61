@@ -3,7 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Progression {
-    private static final int maxLength = 10;
+    private static final int MAX_LENGTH = 10;
     private static int[] getPrintProgression(int element, int step, int maxLength) {
         int[] printProgression = new int[maxLength];
 
@@ -21,12 +21,12 @@ public class Progression {
         String[][] gameData = new String[Engine.NUMBER_QUESTION][2];
 
         for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
-            int firstElement = Engine.getRandomNumber(maxLength);
-            int step = Engine.getRandomNumber(maxLength);
-            int[] gameProgression = getPrintProgression(firstElement, step, maxLength);
-            int missingElement = Engine.getRandomNumber(maxLength);
+            int firstElement = Engine.getRandomNumber(MAX_LENGTH);
+            int step = Engine.getRandomNumber(MAX_LENGTH);
+            int[] gameProgression = getPrintProgression(firstElement, step, MAX_LENGTH);
+            int missingElement = Engine.getRandomNumber(MAX_LENGTH);
             StringBuilder missedElement = new StringBuilder();
-            for (int j = 0; j < maxLength; j++) {
+            for (int j = 0; j < MAX_LENGTH; j++) {
                 if (j == missingElement) {
                     missedElement.append(".. ");
                 } else {
