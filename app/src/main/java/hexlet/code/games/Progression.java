@@ -21,13 +21,11 @@ public class Progression {
         String[][] gameData = new String[Engine.NUMBER_QUESTION][2];
 
         for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
-            int firstElement = Engine.getRandomNumber(MAX_LENGTH);
-            int step = Engine.getRandomNumber(MAX_LENGTH);
-            int[] gameProgression = getPrintProgression(firstElement, step, MAX_LENGTH);
-            int missingElement = Engine.getRandomNumber(MAX_LENGTH);
+            int generalMeaning = Engine.getRandomNumber(MAX_LENGTH);
+            int[] gameProgression = getPrintProgression(generalMeaning, generalMeaning, MAX_LENGTH);
             StringBuilder missedElement = new StringBuilder();
             for (int j = 0; j < MAX_LENGTH; j++) {
-                if (j == missingElement) {
+                if (j == generalMeaning) {
                     missedElement.append(".. ");
                 } else {
                     missedElement.append(gameProgression[j]);
@@ -35,7 +33,7 @@ public class Progression {
                 }
             }
             gameData[i][0] = missedElement.toString();
-            gameData[i][1] = Integer.toString(gameProgression[missingElement]);
+            gameData[i][1] = Integer.toString(gameProgression[generalMeaning]);
         }
         String taskGame =  "What number is missing in the progression?";
         Engine.playGame(gameData, taskGame);
