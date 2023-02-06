@@ -3,12 +3,13 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class GCD {
+    private static int numberQuestion = 3;
     private static int maxGcd(int numberOne, int numberTwo) {
         return numberTwo == 0 ? numberOne : maxGcd(numberTwo, numberOne % numberTwo);
     }
 
     public static void gameGCD() {
-        String[][] gameData = new String[3][2];
+        String[][] gameData = new String[numberQuestion][2];
 
         for (int i = 0; i < Engine.maxRounds; i++) {
             int oneNumber = Engine.getRandomNumber(Engine.maxNumber);

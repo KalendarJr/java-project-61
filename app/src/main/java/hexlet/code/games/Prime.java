@@ -3,6 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
+    private static int numberQuestion = 3;
     private static boolean isPrime(int number) {
         boolean result = true;
         for (int i = 2; i <= number / 2; i++) {
@@ -15,7 +16,7 @@ public class Prime {
     }
 
     public static void gamePrime() {
-        String[][] gameData = new String[3][2];
+        String[][] gameData = new String[numberQuestion][2];
 
         for (int i = 0; i < Engine.maxRounds; i++) {
             int randomNumber = Engine.getRandomNumber(Engine.maxNumber);

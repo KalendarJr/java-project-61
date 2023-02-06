@@ -3,6 +3,8 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Progression {
+    private static int numberQuestion = 3;
+    private static int maxLength = 10;
     private static int[] getPrintProgression(int element, int step, int length) {
 //        int lengthProgression = Engine.getRandomNumber(Engine.otherNumber);
         int[] printProgression = new int[length];
@@ -18,10 +20,9 @@ public class Progression {
     }
 
     public static void gameProgression() {
-        String[][] gameData = new String[3][2];
+        String[][] gameData = new String[numberQuestion][2];
 
         for (int i = 0; i < Engine.maxRounds; i++) {
-            int maxLength = 10;
             int firstElement = Engine.getRandomNumber(maxLength);
             int step = Engine.getRandomNumber(maxLength);
             int[] gameProgression = getPrintProgression(firstElement, step, maxLength);

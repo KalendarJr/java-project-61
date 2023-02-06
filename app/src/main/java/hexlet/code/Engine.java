@@ -3,9 +3,9 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static int maxRounds = 3;
-    public static int otherNumber = 20;
-    public static int maxNumber = 100;
+    public static final int maxRounds = 3;
+    public static final int otherNumber = 20;
+    public static final int maxNumber = 100;
     public static int getRandomNumber(int lim) {
         return (int) (Math.random() * lim);
     }

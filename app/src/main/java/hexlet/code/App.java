@@ -32,6 +32,7 @@ public class App {
             case 4 -> GCD.gameGCD();
             case 5 -> Progression.gameProgression();
             case 6 -> Prime.gamePrime();
+            default -> System.out.println("Sorry. There is no such item.");
         }
 
         scannerChoice.close();
