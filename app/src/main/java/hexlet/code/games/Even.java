@@ -3,16 +3,15 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Even {
-    private static final int numberQuestion = 3;
     private static boolean isEven(int number) {
         return (number % 2 == 0);
     }
 
     public static void gameEven() {
-        String[][] gameData = new String[numberQuestion][2];
+        String[][] gameData = new String[Engine.NUMBER_QUESTION][2];
 
-        for (int i = 0; i < Engine.maxRounds; i++) {
-            int randomNumber = Engine.getRandomNumber(Engine.maxNumber);
+        for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
+            int randomNumber = Engine.getRandomNumber(Engine.MAX_NUMBER);
             gameData[i][0] = Integer.toString(randomNumber);
             gameData[i][1] = isEven(randomNumber) ? "yes" : "no";
         }

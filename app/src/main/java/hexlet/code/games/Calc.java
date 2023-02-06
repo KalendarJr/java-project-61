@@ -2,7 +2,6 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 public class Calc {
-    private static final int numberQuestion = 3;
     public static int calculations(int oneNumber, int twoNumber, String operator) {
         return switch (operator) {
             case "*" -> oneNumber * twoNumber;
@@ -12,12 +11,12 @@ public class Calc {
         };
     }
     public static void gameCalc() {
-        String[][] gameData = new String[numberQuestion][2];
+        String[][] gameData = new String[Engine.NUMBER_QUESTION][2];
         String[] usedOperators = {"*", "+", "-"};
 
-        for (int i = 0; i < Engine.maxRounds; i++) {
-            int oneNumber = Engine.getRandomNumber(Engine.otherNumber);
-            int twoNumber = Engine.getRandomNumber(Engine.otherNumber);
+        for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
+            int oneNumber = Engine.getRandomNumber(Engine.OTHER_NUMBER);
+            int twoNumber = Engine.getRandomNumber(Engine.OTHER_NUMBER);
             gameData[i][0] = oneNumber + " " + usedOperators[i] + " " + twoNumber;
             gameData[i][1] = String.valueOf(calculations(oneNumber, twoNumber, usedOperators[i]));
         }

@@ -9,6 +9,12 @@ import hexlet.code.games.Prime;
 import java.util.Scanner;
 
 public class App {
+    private static final int GREETING = 1;
+    private static final int EVEN_GAME = 2;
+    private static final int CALC_GAME = 3;
+    private static final int GCD_GAME = 4;
+    private static final int PROGRESSION_GAME = 5;
+    private static final int PRIME_GAME = 6;
     public static void main(String[] args) {
         System.out.println("Please enter the game number and press Enter.");
         System.out.println("1 - Greet");
@@ -26,12 +32,12 @@ public class App {
         int choice = scannerChoice.nextInt();
 
         switch (choice) {
-            case 1 -> Cli.main(args);
-            case 2 -> Even.gameEven();
-            case 3 -> Calc.gameCalc();
-            case 4 -> GCD.gameGCD();
-            case 5 -> Progression.gameProgression();
-            case 6 -> Prime.gamePrime();
+            case GREETING -> Cli.main(args);
+            case EVEN_GAME -> Even.gameEven();
+            case CALC_GAME -> Calc.gameCalc();
+            case GCD_GAME -> GCD.gameGCD();
+            case PROGRESSION_GAME -> Progression.gameProgression();
+            case PRIME_GAME -> Prime.gamePrime();
             default -> System.out.println("Sorry. There is no such item.");
         }
 

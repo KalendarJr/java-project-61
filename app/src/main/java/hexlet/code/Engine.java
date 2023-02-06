@@ -3,9 +3,10 @@ package hexlet.code;
 import java.util.Scanner;
 
 public class Engine {
-    public static final int maxRounds = 3;
-    public static final int otherNumber = 20;
-    public static final int maxNumber = 100;
+    public static final int MAX_ROUNDS = 3;
+    public static final int OTHER_NUMBER = 20;
+    public static final int MAX_NUMBER = 100;
+    public static final int NUMBER_QUESTION = 3;
     public static int getRandomNumber(int lim) {
         return (int) (Math.random() * lim);
     }
@@ -17,7 +18,7 @@ public class Engine {
         System.out.println("Hello, " + userName + "!");
         System.out.println(taskGame);
 
-        for (int i = 0; i < Engine.maxRounds; i++) {
+        for (int i = 0; i < Engine.MAX_ROUNDS; i++) {
             System.out.println("Question: " + dataGame[i][0]);
             System.out.print("Your answer: ");
             String answerUser = scanner.next();
