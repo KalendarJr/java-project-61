@@ -19,7 +19,7 @@ public class GCD {
         for (int i = 0; i < Engine.maxRounds; i++) {
             int oneNumber = Engine.getRandomNumber(Engine.maxNumber);
             int twoNumber = Engine.getRandomNumber(Engine.maxNumber);
-            gameData[i][0] = oneNumber + " " + " " + twoNumber;
+            gameData[i][0] = oneNumber + " " + twoNumber;
             gameData[i][1] = String.valueOf(maxGcd(oneNumber, twoNumber));
         }
         String taskGame = "Find the greatest common divisor of given numbers.";
