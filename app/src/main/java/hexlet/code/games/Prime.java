@@ -3,57 +3,26 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Prime {
-    public static void main(String[] args) {
-        String userName = Engine.nameUser();
-        System.out.println(Engine.questionPrime);
-
-        System.out.println(Engine.question + Engine.primeNumberOne);
-        System.out.print("Your answer: ");
-        String resultOne = Engine.answerUserString();
-        if (Engine.isPrime(Engine.primeNumberOne) == true && resultOne.equals("yes")) {
-            System.out.println("Correct!");
-        } else if (Engine.isPrime(Engine.primeNumberOne) == true && resultOne.equals("no")) {
-            System.out.println("'" + resultOne + "'" + " is wrong answer ;(. Correct answer was " + "'" + "yes" + "'.");
-            System.out.println("Let's try again, " + userName + "!");
-            return;
-        } else if (Engine.isPrime(Engine.primeNumberOne) == false && resultOne.equals("yes")) {
-            System.out.println("'" + resultOne + "'" + " is wrong answer ;(. Correct answer was " + "'" + "no" + "'.");
-            System.out.println("Let's try again, " + userName + "!");
-            return;
-        } else if (Engine.isPrime(Engine.primeNumberOne) == false && resultOne.equals("no")) {
-            System.out.println("Correct!");
+    private static boolean isPrime(int number) {
+        boolean result = true;
+        for (int i = 2; i <= number / 2; i++) {
+            if (number % i == 0) {
+                result = false;
+                break;
+            }
         }
+        return result;
+    }
 
-        System.out.println(Engine.question + Engine.primeNumberTwo);
-        System.out.print("Your answer: ");
-        String resultTwo = Engine.answerUserString();
-        if (Engine.isPrime(Engine.primeNumberTwo) == true && resultTwo.equals("yes")) {
-            System.out.println("Correct!");
-        } else if (Engine.isPrime(Engine.primeNumberTwo) == true && resultTwo.equals("no")) {
-            System.out.println("'" + resultTwo + "'" + " is wrong answer ;(. Correct answer was " + "'" + "yes" + "'.");
-            return;
-        } else if (Engine.isPrime(Engine.primeNumberTwo) == false && resultTwo.equals("yes")) {
-            System.out.println("'" + resultTwo + "'" + " is wrong answer ;(. Correct answer was " + "'" + "no" + "'.");
-            return;
-        } else if (Engine.isPrime(Engine.primeNumberTwo) == false && resultTwo.equals("no")) {
-            System.out.println("Correct!");
-        }
+    public static void gamePrime() {
+        String[][] gameData = new String[3][2];
 
-        System.out.println(Engine.question + Engine.primeNumberThree);
-        System.out.print("Your answer: ");
-        String resultThree = Engine.answerUserString();
-        if (Engine.isPrime(Engine.primeNumberThree) == true && resultThree.equals("yes")) {
-            System.out.println("Correct!");
-            System.out.println("Congratulations, " + userName + "!");
-        } else if (Engine.isPrime(Engine.primeNumberThree) == true && resultThree.equals("no")) {
-            System.out.println("'" + resultThree + "'" + " is wrong answer ;(. Correct answer was " + "'" + "yes" + "'.");
-            return;
-        } else if (Engine.isPrime(Engine.primeNumberThree) == false && resultThree.equals("yes")) {
-            System.out.println("'" + resultOne + "'" + " is wrong answer ;(. Correct answer was " + "'" + "no" + "'.");
-            return;
-        } else if (Engine.isPrime(Engine.primeNumberThree) == false && resultThree.equals("no")) {
-            System.out.println("Correct!");
-            System.out.println("Congratulations, " + userName + "!");
+        for (int i = 0; i < Engine.maxRounds; i++) {
+            int randomNumber = Engine.getRandomNumber(Engine.maxNumber);
+            gameData[i][0] = String.valueOf(randomNumber);
+            gameData[i][1] = isPrime(randomNumber) ? "yes" : "no";
         }
+        String taskGame = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
+        Engine.playGame(gameData, taskGame);
     }
 }

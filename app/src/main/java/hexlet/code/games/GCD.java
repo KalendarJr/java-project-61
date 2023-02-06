@@ -3,50 +3,26 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class GCD {
-    public static void main(String[] args) {
-        String userName = Engine.nameUser();
-
-        var i = 3;
-        System.out.println("Find the greatest common divisor of given numbers.");
-        System.out.println("Question: " + Engine.numberOne + " " + Engine.numberOne * i);
-        System.out.print("Your answer: ");
-        int resultOne = Engine.answerUser();
-
-        var oneGcd = Engine.maxGcd(Engine.numberOne, Engine.numberOne * i);
-        if (resultOne == Engine.maxGcd(Engine.numberOne, Engine.numberOne * i)) {
-            System.out.println("Correct!");
-        } else {
-            System.out.println("'" + resultOne + "'" + " is wrong answer ;(. Correct answer was '" + oneGcd + "'.");
-            System.out.println("Let's try again, " + userName + "!");
-            return;
+    private static int maxGcd(int numberOne, int numberTwo) {
+        int gcd = 1;
+        for (int i = 1; i <= numberOne && i <= numberTwo; i++) {
+            if (numberOne % i == 0 && numberTwo % i == 0) {
+                gcd = i;
+            }
         }
+        return gcd;
+    }
 
-        var j = 5;
-        System.out.println("Question: " + (Engine.numberTwo * j) + " " + (Engine.numberTwo + 30));
-        System.out.print("Your answer: ");
-        int resultTwo = Engine.answerUser();
+    public static void gameGCD() {
+        String[][] gameData = new String[3][2];
 
-        var twoGcd = Engine.maxGcd(Engine.numberTwo * j, Engine.numberTwo + 30);
-        if (resultTwo == twoGcd) {
-            System.out.println("Correct!");
-        } else {
-            System.out.println("'" + resultTwo + "'" + " is wrong answer ;(. Correct answer was " + "'" + twoGcd + "'.");
-            System.out.println("Let's try again, " + userName + "!");
-            return;
+        for (int i = 0; i < Engine.maxRounds; i++) {
+            int oneNumber = Engine.getRandomNumber(Engine.maxNumber);
+            int twoNumber = Engine.getRandomNumber(Engine.maxNumber);
+            gameData[i][0] = oneNumber + " " + " " + twoNumber;
+            gameData[i][1] = String.valueOf(maxGcd(oneNumber, twoNumber));
         }
-
-        var k = 7;
-        System.out.println("Question: " + Engine.numberOne + " " + Engine.numberOne * k);
-        System.out.print("Your answer: ");
-        int resultThree = Engine.answerUser();
-
-        var threeGcd = Engine.maxGcd(Engine.numberOne, Engine.numberOne * k);
-        if (resultThree == threeGcd) {
-            System.out.println("Correct!");
-            System.out.println("Congratulations, " + userName + "!");
-        } else {
-            System.out.println("'" + resultThree + "'" + " is wrong answer ;(. Correct answer was " + "'" + threeGcd + "'.");
-            System.out.println("Let's try again, " + userName + "!");
-        }
+        String taskGame = "Find the greatest common divisor of given numbers.";
+        Engine.playGame(gameData, taskGame);
     }
 }

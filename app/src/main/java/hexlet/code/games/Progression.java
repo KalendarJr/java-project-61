@@ -3,43 +3,42 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 
 public class Progression {
-    public static void main(String[] args) {
-        String userName = Engine.nameUser();
-        System.out.println(Engine.questionProgression);
-        System.out.println(Engine.question);
-        Engine.progressionOne();
-        int resultOne = Engine.answerUser();
+    private static int[] getPrintProgression(int element, int step, int length) {
+//        int lengthProgression = Engine.getRandomNumber(Engine.otherNumber);
+        int[] printProgression = new int[length];
 
-        if (resultOne == Engine.resultOneNumber) {
-            System.out.println("Correct!");
-        } else {
-            System.out.println("'" + resultOne + "'" + Engine.isWrong + Engine.resultOneNumber + "'.");
-            System.out.println(Engine.letsTry + userName + "!");
-            return;
-        }
-
-            System.out.print("Question: ");
-            Engine.progressionTwo();
-            int resultTwo = Engine.answerUser();
-
-            if (resultTwo == Engine.resultTwoNumber) {
-                System.out.println("Correct!");
+        for (int i = 0; i < length; i++) {
+            if (i == 0) {
+                printProgression[i] = element;
             } else {
-                System.out.println("'" + resultTwo + "'" + " is wrong answer ;(. Correct answer was " + "'" + Engine.resultTwoNumber + "'.");
-                System.out.println("Let's try again, " + userName + "!");
-            return;
+                printProgression[i] = printProgression[i - 1] + step;
             }
-
-        System.out.print("Question: ");
-        Engine.progressionThree();
-        int resultThree = Engine.answerUser();
-
-        if (resultThree == Engine.resultThreeNumber) {
-            System.out.println("Correct!");
-            System.out.println("Congratulations, " + userName + "!");
-        } else {
-            System.out.println("'" + resultThree + "'" + " is wrong answer ;(. Correct answer was " + "'" + Engine.resultThreeNumber + "'.");
-            System.out.println("Let's try again, " + userName + "!");
         }
+        return printProgression;
+    }
+
+    public static void gameProgression() {
+        String[][] gameData = new String[3][2];
+
+        for (int i = 0; i < Engine.maxRounds; i++) {
+            int maxLength = 10;
+            int firstElement = Engine.getRandomNumber(maxLength);
+            int step = Engine.getRandomNumber(maxLength);
+            int[] gameProgression = getPrintProgression(firstElement, step, maxLength);
+            int missingElement = Engine.getRandomNumber(maxLength);
+            StringBuilder missedElement = new StringBuilder();
+            for (int j = 0; j < maxLength; j++) {
+                if (j == missingElement) {
+                    missedElement.append(".. ");
+                } else {
+                    missedElement.append(gameProgression[j]);
+                    missedElement.append(" ");
+                }
+            }
+            gameData[i][0] = missedElement.toString();
+            gameData[i][1] = Integer.toString(gameProgression[missingElement]);
+        }
+        String taskGame =  "What number is missing in the progression?";
+        Engine.playGame(gameData, taskGame);
     }
 }

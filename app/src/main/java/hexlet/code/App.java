@@ -26,30 +26,12 @@ public class App {
         int choice = scannerChoice.nextInt();
 
         switch (choice) {
-            case 1:
-                Engine.welcomeUser();
-                Cli.main(args);
-                break;
-            case 2:
-                Engine.welcomeUser();
-                Even.main(args);
-                break;
-            case 3:
-                Engine.welcomeUser();
-                Calc.main(args);
-                break;
-            case 4:
-                Engine.welcomeUser();
-                GCD.main(args);
-                break;
-            case 5:
-                Engine.welcomeUser();
-                Progression.main(args);
-                break;
-            case 6:
-                Engine.welcomeUser();
-                Prime.main(args);
-                break;
+            case 1 -> Cli.main(args);
+            case 2 -> Even.gameEven();
+            case 3 -> Calc.gameCalc();
+            case 4 -> GCD.gameGCD();
+            case 5 -> Progression.gameProgression();
+            case 6 -> Prime.gamePrime();
         }
 
         scannerChoice.close();
