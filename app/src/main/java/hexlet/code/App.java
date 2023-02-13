@@ -33,11 +33,11 @@ public class App {
 
         switch (choice) {
             case GREETING -> Cli.main(args);
-            case EVEN_GAME -> Even.gameEven();
-            case CALC_GAME -> Calc.gameCalc();
-            case GCD_GAME -> GCD.gameGCD();
-            case PROGRESSION_GAME -> Progression.gameProgression();
-            case PRIME_GAME -> Prime.gamePrime();
+            case EVEN_GAME -> Even.startEvenGame();
+            case CALC_GAME -> Calc.startCalcGame();
+            case GCD_GAME -> GCD.startGCDGame();
+            case PROGRESSION_GAME -> Progression.startProgressionGame();
+            case PRIME_GAME -> Prime.startPrimeGame();
             default -> System.out.println("Sorry. There is no such item.");
         }
 
